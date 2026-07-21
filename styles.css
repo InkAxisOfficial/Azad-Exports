@@ -220,8 +220,9 @@ nav {
 }
 
 .mobile-menu.open {
-  max-height: 340px;
+  max-height: 80vh;
   opacity: 1;
+  overflow-y: auto;
 }
 
 .mobile-menu a {
@@ -732,6 +733,7 @@ nav {
   transition: transform .12s ease, box-shadow .3s ease;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .product-card::after {
@@ -795,6 +797,19 @@ nav {
   text-transform: uppercase;
 }
 
+.view-more {
+  display: block;
+  margin-top: 12px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--green);
+  transform: translateZ(10px);
+}
+
+.product-card:hover .view-more {
+  text-decoration: underline;
+}
+
 .products-note {
   margin-top: 20px;
   padding: 14px 20px;
@@ -856,6 +871,19 @@ nav {
   position: relative;
   overflow: hidden;
   transition: transform .3s ease, border-color .3s ease;
+  cursor: pointer;
+}
+
+.cert-card .view-more {
+  display: block;
+  margin-top: 12px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--gold-light);
+}
+
+.cert-card:hover .view-more {
+  text-decoration: underline;
 }
 
 .cert-card:hover {
@@ -1349,6 +1377,89 @@ footer.visible {
 
 .form-row textarea {
   resize: vertical;
+}
+
+/* ---------- PRODUCT DETAIL MODAL ---------- */
+.detail-box {
+  max-width: 600px;
+}
+
+.variety-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 20px;
+}
+
+@media(max-width:480px) {
+  .variety-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.variety-card {
+  background: var(--paper);
+  border: 1px solid rgba(14, 42, 71, 0.08);
+  border-radius: 14px;
+  padding: 18px 16px;
+  text-align: left;
+}
+
+.variety-emoji {
+  font-size: 34px;
+  line-height: 1;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.variety-photo {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  display: block;
+  border: 1px solid rgba(14, 42, 71, 0.08);
+}
+
+.variety-card h4 {
+  font-size: 15px;
+  color: var(--navy);
+  margin-bottom: 5px;
+}
+
+.variety-card p {
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+/* ---------- CERTIFICATE LIGHTBOX MODAL ---------- */
+.cert-box {
+  max-width: 560px;
+}
+
+.cert-box img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(14, 42, 71, 0.1);
+  margin-top: 16px;
+  box-shadow: 0 20px 45px -20px rgba(14, 42, 71, 0.35);
+}
+
+.cert-box .cert-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+  margin-top: 16px;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+.cert-box .cert-meta strong {
+  color: var(--navy);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12.5px;
 }
 
 @media (prefers-reduced-motion: reduce) {
