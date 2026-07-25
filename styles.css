@@ -1015,6 +1015,23 @@ nav {
   stroke-width: 1.7;
 }
 
+.contact-icon svg[fill="currentColor"] {
+  fill: #0A66C2;
+  stroke: none;
+}
+
+.contact-row:has(svg[fill="currentColor"]) .contact-icon {
+  background: #E8F1FB;
+}
+
+.email-row .contact-icon {
+  background: #FCE8E6;
+}
+
+.email-row .contact-icon svg {
+  stroke: #EA4335;
+}
+
 .contact-row .label {
   font-size: 12px;
   color: var(--ink-soft);
