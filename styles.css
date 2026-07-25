@@ -632,8 +632,8 @@ nav {
 /* ---------- ABOUT ---------- */
 .about-grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 60px;
+  grid-template-columns: 1.4fr 0.75fr;
+  gap: 40px;
   align-items: start;
 }
 
@@ -644,28 +644,68 @@ nav {
 }
 
 .about-grid h2 {
-  font-size: clamp(28px, 4vw, 40px);
-  margin-bottom: 22px;
+  font-size: clamp(26px, 3.6vw, 36px);
+  margin-bottom: 16px;
 }
 
 .about-grid p {
   color: var(--ink-soft);
-  font-size: 16px;
+  font-size: 15px;
   max-width: 520px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
+}
+
+.founder-card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(14, 42, 71, 0.08);
+  box-shadow: var(--card-shadow);
+  height: 100%;
+}
+
+.founder-card img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  object-position: center 8%;
+  display: block;
+}
+
+.founder-info {
+  padding: 20px 22px 24px;
+  text-align: center;
+}
+
+.founder-info h4 {
+  font-family: 'Fraunces', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+.founder-info p {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12.5px;
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0;
 }
 
 .stat-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 12px;
+  margin-top: 18px;
 }
 
 .stat-card {
   background: #fff;
   border: 1px solid rgba(14, 42, 71, 0.08);
   border-radius: 16px;
-  padding: 22px 20px;
+  padding: 18px 18px;
   box-shadow: var(--card-shadow);
   transition: transform .3s ease;
 }
